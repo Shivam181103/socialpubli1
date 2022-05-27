@@ -22,17 +22,19 @@ h1,h2,h3,h4,p{
     align-items: center;
 }
 .landing-page>div{
-    margin: 2rem;
+      margin: 2rem;
       padding: 1rem;
-    width: 20rem;
-    color: white;
-    border-radius: 20px;
-    height: 20rem;
-     display: flex;
-    flex-direction: column;
+      width: 20rem;
+      color: white;
+      border-radius: 20px;
+      height: 20rem;
+       display: flex;
+       flex-direction: column;
     
     justify-content: space-between;
 }
+
+
 .brand-page-cont{
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
 }
@@ -68,11 +70,11 @@ h1,h2,h3,h4,p{
     font-weight: 600;
     font-size: 1.2rem;
 }
- 
+
 .quote-wrapper{
 
- background-image: url('../../IMAGES1//website_bg.jpg');
- background-size: 15rem;
+    background-image: url('../../IMAGES1//website_bg.jpg');
+    background-size: 15rem;
     padding: 2rem;
     color: white;
 }
@@ -154,7 +156,7 @@ h1,h2,h3,h4,p{
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     padding: 3rem 0;
+     padding: 3rem 0rem;
      position: relative;
      z-index: 0;
  }
@@ -171,9 +173,12 @@ h1,h2,h3,h4,p{
     position: relative; 
     cursor: pointer;
     font-size: 3.5rem;
-     
+     margin-bottom: -0.2rem;
+
+     text-align: center;
    
  }
+
  .big-heading-link-cont>h1:before{ 
      transition: height 0.6s ease;
      content: attr(data-text);
@@ -187,10 +192,12 @@ h1,h2,h3,h4,p{
       -webkit-text-stroke-color:   white  ; 
      left: 0;
      top: 0;
+     text-align: center;
  }
  .big-heading-link-cont>h1:hover:before{
      height: 0;
  }
+ 
  .plateform-wrapper{
      width: 100%;
      height: 37rem;
@@ -299,7 +306,7 @@ h1,h2,h3,h4,p{
      flex-direction: column;
 }
  
-.global-text-cont>div>h1{
+/* .global-text-cont>div>h1{
     font-size: 3.6rem;
     color: transparent;
     font-family: 'Georama', sans-serif;
@@ -311,7 +318,42 @@ h1,h2,h3,h4,p{
     color: black;
     -webkit-text-stroke-width:0.4px;
     -webkit-text-stroke-color: #000;
-}
+} */
+
+.global-text-cont>div>h1{
+    
+    font-family: 'Georama', sans-serif;
+    font-weight: 700; 
+    color: black; 
+   display: inline-block;
+   vertical-align: top;
+   position: relative; 
+   cursor: pointer;
+   font-size: 3.6rem;
+ }
+ .global-text-cont>div>h1:before{
+    transition: height 0.6s ease;
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    font-weight: 700;
+     height: 100%; 
+     background: linear-gradient(to right, #F15A24 , #F7931E  );;
+     -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+     font-family: 'Georama', sans-serif;
+     font-weight: 700;
+     -webkit-text-stroke-width:0.6px;
+     -webkit-text-stroke-color: #fff;
+     font-size:3.6rem;
+     
+    left: 0;
+    top: 0;
+ }
+ .global-text-cont>div>h1:hover::before{
+     height: 0;
+ }
  .clients-wrapper{
     background-image: url('../../IMAGES1//website_bg.jpg');
     background-size: 15rem;
@@ -444,4 +486,248 @@ img.joinus{
     font-size: 1.3rem;
     font-weight: 600;
     color: white;
+}
+.small-text-cont>h1{
+    font-size: 5rem;
+
+}
+.small-text-cont>p{
+    font-size: 1.8rem;
+    padding-top: 3rem;
+}
+@media (max-width:625px){
+    .landing-page{
+        height: auto;
+        padding-top:9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing-page>div{
+        margin:2rem;
+        padding:1rem;
+        width: 20rem;
+        color: white;
+        border-radius: 20px;
+        height: 20rem;
+         display: flex;
+         flex-direction: column;
+      
+        justify-content: space-between;
+  }
+   
+  .quote-wrapper>img{
+      width: 4rem;
+  }
+  .small-text-cont{
+    padding:3rem 4rem 3rem;
+    color: white;
+}
+ .small-text-cont>h2{
+    font-size: 3rem;
+ }
+ .small-text-cont>h1{
+    font-size: 5.5rem;
+ }
+ .small-text-cont>h3{
+    font-size:2.5rem;
+ }
+ .global{
+     display: grid;
+ }
+ .global-img-cont{
+     display: flex;
+     width: 100%;
+     position: relative;
+     justify-content:center;
+     align-items: center;
+ }
+ 
+ .global-text-cont{
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     align-items: center;
+ }
+.global-img-cont>img{
+    width:10rem;
+    height: auto;
+}
+ .first{
+     top:3rem;
+     left: 8.5rem;
+ }
+ 
+.global-text-cont>div>h1{
+    
+    font-family: 'Georama', sans-serif;
+    font-weight: 700; 
+    color: black; 
+   display: inline-block;
+   vertical-align: top;
+   position: relative; 
+   cursor: pointer;
+   font-size: 2rem;
+ }
+ .global-text-cont>div>h1:before{
+    transition: height 0.6s ease;
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    font-weight: 700;
+     height: 100%; 
+     background: linear-gradient(to right, #F15A24 , #F7931E  );;
+     -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+     font-family: 'Georama', sans-serif;
+     font-weight: 700;
+     -webkit-text-stroke-width:0.6px;
+     -webkit-text-stroke-color: #fff;
+     font-size:2rem; 
+     z-index: 1;
+    left: 0;
+    top: 0;
+ }
+ .global-text-cont>div>h1:hover::before{
+     height: 0;
+ }
+
+ .background-heading>h1{
+    font-size: 6.5rem;
+    opacity: 0.3;
+    padding: 0 1rem;
+    font-family: 'Georama', sans-serif;
+    font-weight: 700;
+     
+    -webkit-text-stroke-width:0.4px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.big-heading-link-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+    position: relative;
+    z-index: 0;
+}
+.big-heading-link-cont>h1{ 
+   
+    font-family: 'Georama', sans-serif;
+    font-weight: 700; 
+    background: linear-gradient(to right, #F15A24 , #F7931E  );
+     background-clip: text;
+    -webkit-text-stroke-width:0.4px;
+    -webkit-text-stroke-color:   #F15A24  ;
+   display: inline-block;
+   vertical-align: top;
+   position: relative; 
+   cursor: pointer;
+   font-size: 2.7rem;
+    margin-bottom: -0.2rem;
+
+    text-align: center;
+  
+}
+.background-heading>h1{
+    font-size: 4.5rem;
+}
+.big-heading-link-cont>h1:before{ 
+    transition: height 0.6s ease;
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    font-weight: 700;
+     height: 100%; 
+     color: black;
+     font-size:2.7rem;
+     -webkit-text-stroke-width:0.4px;
+     -webkit-text-stroke-color:   white  ; 
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+.big-heading-link-cont>h1:hover:before{
+    height: 0;
+}
+.small-text-cont>h1{
+    font-size: 3.5rem;
+
+}
+.global-tech-wrapper
+{
+    height: auto;
+}
+.global-tech-cont{
+    height: auto;
+}
+ .small-text-cont>p{
+     font-size: 1.3rem;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+ }
+  .our-influencer-wrapper{
+      height: auto;
+      display: grid;
+  }
+  .our-influencer-wrapper>*{
+      width: 100%;
+      height: auto;
+      
+  }
+  div.influencers{
+      width: 100%;
+      height: 0;
+      margin-bottom: -15rem;
+      padding: 0 ;
+      margin-left: -1rem;
+  }
+  .influencers>img{
+      width: 13rem;
+      height: auto;
+  }
+
+  .client-heading>div>h1{
+font-size: 3rem;
+  }
+  .client-heading>div>p{
+      font-size: 1.5rem;
+  }
+  .brands-img-wrap>img{
+      width: 4.5rem;
+  }
+
+  .upper-cont{
+      display: flex;
+      
+  }
+  .upper-cont>h1{
+      font-size: 3rem;
+      font-weight: 600;
+      width: 60%;
+       
+     margin-right: 0rem;
+  }
+  .upper-cont>form{
+      width: calc( 100% - 2rem );
+      margin: 1rem;
+  }
+  img.keyboard{
+   width: 20rem;
+   top: -5rem;
+   left: -5rem;
+  }
+  img.book{
+      width: 25rem;
+      top: 15rem;
+      left: -5rem;
+  }
+  img.pen{
+      width: 10rem;
+      bottom: 0;
+      left: 12rem;
+  }
+
 }

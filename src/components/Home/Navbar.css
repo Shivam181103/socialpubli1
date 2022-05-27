@@ -1,8 +1,20 @@
 
 .nav-wrapper-custom{
     position: relative;
+    
 }
+.nav-collapse-custom{
+    display: flex;
+    justify-content: end;
+}
+.toggler-custom {
+     
+    position: absolute;
+   
+    right: 3rem;
+    font-size: 1.5rem; 
 
+}
 .nav-logo{
     position: absolute;
     top: 1rem;
@@ -17,4 +29,25 @@
     font-weight: 600;
     margin: 0 0.6rem;
     padding: 0;
+}
+
+
+@media (max-width:625px){
+    
+    .nav-logo{
+        top: 0.2rem;
+    }
+    .toggler-custom {
+        top: 1.2rem;
+    }
+    .nav-collapse-custom{
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        margin-top: 5rem;
+        margin-right: 1rem;
+    }
+    .nav-collapse-custom ul li>a{
+        font-size: 1.5rem;
+    }
 }

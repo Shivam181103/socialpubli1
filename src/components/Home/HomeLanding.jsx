@@ -63,7 +63,7 @@ const HomeLanding = () => {
     return (
         <>
             <div className="home-landing-container">
-                <Navbar />
+                <Navbar  />
                 <div className="landing-page row m-0">
                     <div className="col col-mg-6 col-sm-6 col-xm-12  influencer-page-cont">
                         <h1> I AM BRAND.</h1>
@@ -125,14 +125,14 @@ const HomeLanding = () => {
                     </div>
                     <div className="global-text-cont">
                         <div id='first' onMouseOver={changeUI} defaultValue='marketing' className="text-cont">
-                            <h1 id='first' >MARKETING SERVICE</h1>
+                            <h1 id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
 
                         </div>
                         <div id='second' onMouseOver={changeUI} defaultValue='talent' className="text-cont">
-                            <h1 id='second'>TALENT SERVICE</h1>
+                            <h1 id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
                         </div>
                         <div id='third' onMouseOver={changeUI} defaultValue='tech' className="text-cont">
-                            <h1 id='third'  >PLATEFORM & TECH</h1>
+                            <h1 id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
                         </div>
                     </div>
                 </div>
@@ -155,8 +155,8 @@ const HomeLanding = () => {
                 <div className="global-tech-cont">
                     <div className="big-text-cont "><img src={workinactionimg} alt="" /></div>
                     <div className="small-text-cont ">
-                        <h1 style={{ fontSize: '5rem' }} > 80+ LEADING BRANDS</h1>
-                        <p style={{ fontSize: '1.8rem', paddingTop: '3rem' }} > & THEIR AGENCIES LEVERAGE OUR INFLUENCER NETWORK ACROSS THE MARKETING CYCLE - FOR RESEARCH, SAMPLING, CONTENT CREATION & DISTRIBUTION, DRIVING ENGAGEMENT & CONVERSIONS, AT SCALE.</p>
+                        <h1   > 80+ LEADING BRANDS</h1>
+                        <p > & THEIR AGENCIES LEVERAGE OUR INFLUENCER NETWORK ACROSS THE MARKETING CYCLE - FOR RESEARCH, SAMPLING, CONTENT CREATION & DISTRIBUTION, DRIVING ENGAGEMENT & CONVERSIONS, AT SCALE.</p>
 
                     </div>
                 </div>
