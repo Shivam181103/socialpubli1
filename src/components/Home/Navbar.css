@@ -1,0 +1,20 @@
+
+.nav-wrapper-custom{
+    position: relative;
+}
+
+.nav-logo{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+.navbar-nav-items{
+    margin-right: 1rem;
+}
+.navbar-nav-items>li>a{
+    color: #F7961D;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0.6rem;
+    padding: 0;
+}

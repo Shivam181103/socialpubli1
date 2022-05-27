@@ -1,0 +1,123 @@
+
+.influencerPage-wrapper{
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(41,41,43,1) 100%, rgba(0,212,255,1) 100%); */
+    animation: gradient 10s ease infinite;
+    padding: 8rem 8rem;
+   
+    background-image: url("https://images.unsplash.com/photo-1652810009304-c999bbffd461?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+ 
+
+.infy-heading h1{
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 4rem;
+    font-family: 'Lora', sans-serif;
+
+}
+
+.infy-heading p{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+}
+
+.form-wrapper{
+    background-color: #f8971d;
+     
+    width: 50vw;
+    
+    border-radius: 10px;
+    padding: 5rem;
+    overflow: hidden;
+}
+
+.form-wrapper .instaId{
+    position: relative;
+    margin-top: 2rem;
+}
+
+.instaId input{
+    width:100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    background: transparent;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.instaId label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+    font-weight: 600;
+
+}
+
+.form-wrapper .instaId input:focus ~ label,
+.form-wrapper .instaId input:valid ~ label,
+.form-wrapper .instaId input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+    color: white;
+    top: -20px;
+  left: 0;
+  color: #000;
+  font-size: 12px;
+}
+
+.form-check label{
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-button{
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+    border: 2px solid  black;
+    color: black;
+    background: transparent;
+    
+
+}
+
+.submit-button .submit-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width:760px){
+    .influencerPage-wrapper{
+        padding: 0 0 2rem 0;
+        margin: 2rem 0 0 0;
+    }
+
+    .form-wrapper{
+        padding: 5rem 2rem 5rem 2rem;
+    }
+}
