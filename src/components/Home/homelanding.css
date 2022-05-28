@@ -152,7 +152,7 @@ h1,h2,h3,h4,p{
 
  .background-heading{
      position: absolute;
-      top: -4rem;
+      top: 0rem;
       left: 0;
       display: none;
       width: 100%;
@@ -183,6 +183,7 @@ h1,h2,h3,h4,p{
  .big-heading-link-cont>div:hover .background-heading{
      display: block;
  }
+  
  .big-heading-link-cont>div>h1{ 
      font-size: 3.2rem;
      font-family: 'Georama', sans-serif;
@@ -197,7 +198,7 @@ h1,h2,h3,h4,p{
     cursor: pointer;
     font-size: 4rem;
      margin-bottom: -0.2rem;
-
+height: 100%;
      text-align: center;
    
  }
