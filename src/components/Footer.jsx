@@ -23,12 +23,12 @@ const Footer = () => {
                     <BsFillTelephoneFill />  <span>9723232454</span>
                   </div>
                   <div className="email d-flex">
-                     <MdEmail/> <span>ingluencermarketing@socialpubli.co.in</span>
+                     <MdEmail/> <span>influencermarketing@socialpubli.co.in</span>
                   </div>
               </div>
               <div className="col col-lg-4 col-md-6 col-sm-12 col-xm-12">
                   <h6>About the company</h6>
-                  <p>Socialpuvli is india's growing influencer marketing We use latest technologies and AI driven decisions to genrate higher engagements.</p>
+                  <p>Socialpubli is india's growing influencer marketing We use latest technologies and AI driven decisions to generate higher engagements.</p>
                   <div className="links">
                       <a href="">
                        <FaFacebookF style={{color:'white'}} />

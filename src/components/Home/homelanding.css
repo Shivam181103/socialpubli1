@@ -24,10 +24,10 @@ h1,h2,h3,h4,p{
 .landing-page>div{
       margin: 2rem;
       padding: 1rem;
-      width: 20rem;
+      width: 22rem;
       color: white;
       border-radius: 20px;
-      height: 20rem;
+      height: 22rem;
        display: flex;
        flex-direction: column;
     
@@ -35,32 +35,33 @@ h1,h2,h3,h4,p{
 }
 
 
-.brand-page-cont{
+.influencer-page-cont{
+    
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
 }
  
-.brand-page-cont button{
+.influencer-page-cont button{
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
     box-shadow: white 0px 1px 25px 2px;
 }
-.influencer-page-cont{
+.brand-page-cont{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
 }
-.influencer-page-cont button{
+.brand-page-cont button{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
     box-shadow: white 0px 1px 25px 2px;
 }
 .landing-page>div>h1{
-    font-size: 3.3rem;
+    font-size: 3.7rem;
 }
 
 .landing-page>div>button{
    
-    margin: 2rem;
+    margin: 1.5rem;
     margin-bottom: 3rem;
-    width: calc( 100% - 4rem );
+    width: calc( 100% - 3rem );
     border: none;
-    height: 2.4rem;
+    height: 2.7rem;
      border: 3px solid white;
     display: flex;
     justify-content: center;
@@ -68,21 +69,26 @@ h1,h2,h3,h4,p{
     border-radius: 20px;
     color: white;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
-
+.landing-page>div>button:hover{
+    background: white;
+    color: black;
+}
 .quote-wrapper{
 
     background-image: url('../../IMAGES1//website_bg.jpg');
     background-size: 15rem;
     padding: 2rem;
     color: white;
+   
 }
 
 .quote-wrapper>p{
     padding:4rem 2rem;
     text-align: center;
 }
+ 
 .global-tech-wrapper{
     width: 100%;
     height: 28rem;
@@ -133,11 +139,24 @@ h1,h2,h3,h4,p{
      color: transparent;
      background-color: black;
      z-index: 0;
+     width: 100%;
  }
+.big-heading-link-cont>div{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
  .background-heading{
      position: absolute;
-     z-index: 0;
+      top: -4rem;
+      left: 0;
+      display: none;
+      width: 100%;
+      text-align: center;
  }
  
  .background-heading>h1{
@@ -146,7 +165,7 @@ h1,h2,h3,h4,p{
      padding: 0 1rem;
      font-family: 'Georama', sans-serif;
      font-weight: 700;
-      
+       width: 100%;
      -webkit-text-stroke-width:0.4px;
      -webkit-text-stroke-color: #fff;
  }
@@ -158,9 +177,13 @@ h1,h2,h3,h4,p{
      align-items: center;
      padding: 3rem 0rem;
      position: relative;
+     width: 100%;
      z-index: 0;
  }
- .big-heading-link-cont>h1{ 
+ .big-heading-link-cont>div:hover .background-heading{
+     display: block;
+ }
+ .big-heading-link-cont>div>h1{ 
      font-size: 3.2rem;
      font-family: 'Georama', sans-serif;
      font-weight: 700; 
@@ -172,14 +195,14 @@ h1,h2,h3,h4,p{
     vertical-align: top;
     position: relative; 
     cursor: pointer;
-    font-size: 3.5rem;
+    font-size: 4rem;
      margin-bottom: -0.2rem;
 
      text-align: center;
    
  }
 
- .big-heading-link-cont>h1:before{ 
+ .big-heading-link-cont>div>h1:before{ 
      transition: height 0.6s ease;
      content: attr(data-text);
      position: absolute;
@@ -187,14 +210,14 @@ h1,h2,h3,h4,p{
      font-weight: 700;
       height: 100%; 
       color: black;
-      font-size:3.5rem;
+      font-size:4rem;
       -webkit-text-stroke-width:0.4px;
       -webkit-text-stroke-color:   white  ; 
      left: 0;
      top: 0;
      text-align: center;
  }
- .big-heading-link-cont>h1:hover:before{
+ .big-heading-link-cont>div>h1:hover:before{
      height: 0;
  }
  
@@ -351,7 +374,7 @@ h1,h2,h3,h4,p{
     left: 0;
     top: 0;
  }
- .global-text-cont>div>h1:hover::before{
+ .global-text-cont>div>h1:hover:before{
      height: 0;
  }
  .clients-wrapper{
@@ -515,10 +538,21 @@ img.joinus{
       
         justify-content: space-between;
   }
+  .quote-wrapper{
+      position: relative;
+      padding: 0;
+  } 
    
-  .quote-wrapper>img{
-      width: 4rem;
+  .quote-wrapper>p>img{
+      width: 2rem;
+      margin:0 1rem;
   }
+  .quote-wrapper>p>.left{
+      margin: -1rem 1rem 0 0;
+  }
+  .quote-wrapper>p>.right{
+    margin: 0 0 -1rem 1rem;
+}
   .small-text-cont{
     padding:3rem 4rem 3rem;
     color: white;

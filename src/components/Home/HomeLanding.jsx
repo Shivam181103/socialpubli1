@@ -65,42 +65,39 @@ const HomeLanding = () => {
             <div className="home-landing-container">
                 <Navbar  />
                 <div className="landing-page row m-0">
-                    <div className="col col-mg-6 col-sm-6 col-xm-12  influencer-page-cont">
-                        <h1> I AM BRAND.</h1>
+                    <div className="col col-mg-6 col-sm-6 col-xm-12  brand-page-cont">
+                        <h1> I AM <br /> BRAND</h1>
                         <button onClick={()=>navigate("/brandform")} >Click Here</button>
                     </div>
-                    <div className="col col-mg-6 col-sm-6 col-xm-12  brand-page-cont">
-                        <h1> I AM INFLUENCER.</h1>
+                    <div className="col col-mg-6 col-sm-6 col-xm-12  influencer-page-cont">
+                        <h1> I AM  INFLUENCER</h1>
                         <button onClick={()=>navigate("/influencerform")}>Click Here</button>
                     </div>
                 </div>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
+            <div id="carouselExampleIndicators" class=" carousel slide" data-bs-ride="carousel">
+                
                 <div class="carousel-inner">
+                   
+                    
                     <div class="carousel-item active">
                         <div className="quote-wrapper m-0 d-flex justify-content-center align-items-center  ">
-                            <img src={leftqoutemark} alt="" />
-                            <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.</p>
-                            <img src={rightqoutemark} alt="" />
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div className="quote-wrapper m-0 d-flex justify-content-center align-items-center  ">
-                            <img src={leftqoutemark} alt="" />
-                            <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.</p>
-                            <img src={rightqoutemark} alt="" />
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div className="quote-wrapper m-0 d-flex justify-content-center align-items-center  ">
-                            <img src={leftqoutemark} alt="" />
-                            <p > Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.</p>
-                            <img src={rightqoutemark} alt="" />
+                           {
+                               window.innerWidth <= 625 ?
+                               <p >
+                               <img className='left' src={leftqoutemark} alt="" />
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.
+                               <img className='right' src={rightqoutemark} alt="" />
+                                    </p>
+                               :
+                               <>
+                               <img className='left' src={leftqoutemark} alt="" />
+                               <p >
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.
+                                    </p>
+                               <img className='right' src={rightqoutemark} alt="" />
+                               </>
+                           }
                         </div>
                     </div>
                 </div>
@@ -138,17 +135,15 @@ const HomeLanding = () => {
                 </div>
             </div>
             <div className="big-heading-links-wrapper">
-                <div className="background-heading">
-                    <h1>INFLUENCER MARKETING</h1>
-                </div>
+                
                 <div className="big-heading-link-cont">
-                    <h1 data-text="INFLUENCER MARKETING" className="big-heading">INFLUENCER MARKETING</h1>
-                    <h1 data-text="SOCIAL EXPERIMENTAL" className="big-heading">SOCIAL EXPERIMENTAL</h1>
-                    <h1 data-text="PERFORMANCE MARKETING & MEDIA" className="big-heading">PERFORMANCE MARKETING & MEDIA</h1>
-                    <h1 data-text="CREATIVE CONTENT" className="big-heading">CREATIVE CONTENT</h1>
-                    <h1 data-text="TRACKING & MEASURMENTS WITH INFLUSOFT" className="big-heading">TRACKING & MEASURMENTS WITH INFLUSOFT</h1>
-                    <h1 data-text="STRATEGY" className="big-heading"> STRATEGY</h1>
-                    <h1 data-text="VIEW ALL.." className="big-heading"> VIEW ALL..</h1>
+                  <div> <div className='background-heading'> <h1 >INFLUENCER MARKETING</h1></div>  <h1 data-text="INFLUENCER MARKETING" className="big-heading">INFLUENCER MARKETING</h1></div>
+                  <div> <div className='background-heading'>  <h1  >SOCIAL EXPERIMENTAL</h1></div>   <h1 data-text="SOCIAL EXPERIMENTAL" className="big-heading">SOCIAL EXPERIMENTAL</h1></div>
+                  <div><div className='background-heading'> <h1  >PERFORMANCE MARKETING & MEDIA</h1></div>  <h1 data-text="PERFORMANCE MARKETING & MEDIA" className="big-heading">PERFORMANCE MARKETING & MEDIA</h1></div>
+                  <div> <div className='background-heading'> <h1  >CREATIVE CONTENT</h1> </div>  <h1 data-text="CREATIVE CONTENT" className="big-heading">CREATIVE CONTENT</h1></div>
+                  <div><div className='background-heading'> <h1  >RACKING & MEASURMENTS WITH INFLUSOFT</h1> </div>   <h1 data-text="TRACKING & MEASURMENTS WITH INFLUSOFT" className="big-heading">TRACKING & MEASURMENTS WITH INFLUSOFT</h1></div>
+                  <div><div className='background-heading'> <h1  >STRATEGY</h1> </div>  <h1 data-text="STRATEGY" className="big-heading"> STRATEGY</h1></div>
+                  <div> <div className='background-heading'><h1  >VIEW ALL..</h1> </div> <h1 data-text="VIEW ALL.." className="big-heading"> VIEW ALL..</h1></div>
                 </div>
             </div>
             <div className="global-tech-wrapper">
