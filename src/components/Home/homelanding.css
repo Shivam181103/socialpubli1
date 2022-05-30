@@ -43,6 +43,7 @@ h1,h2,h3,h4,p{
 .influencer-page-cont button:hover{
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
     box-shadow: white 0px 1px 25px 2px;
+    color: white;
 }
 .brand-page-cont{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
@@ -50,6 +51,7 @@ h1,h2,h3,h4,p{
 .brand-page-cont button:hover{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
     box-shadow: white 0px 1px 25px 2px;
+    color: white;
 }
 .landing-page>div>h1{
     font-size: 3.7rem;
