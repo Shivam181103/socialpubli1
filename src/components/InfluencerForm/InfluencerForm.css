@@ -26,7 +26,7 @@
     text-align: center;
     padding-top: 4rem;
     font-family: 'Lora', sans-serif;
-
+padding-bottom: 1rem;
 }
 
 .infy-heading p{
@@ -116,8 +116,18 @@
         padding: 0 0 2rem 0;
         margin: 2rem 0 0 0;
     }
-
+.infy-heading> h1{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
     .form-wrapper{
-        padding: 5rem 2rem 5rem 2rem;
+        margin:  1rem;
+        width: calc( 100% - 2rem );
+        padding:2rem;
+    }
+
+    .form-wrapper>div> input{
+         
+        margin-bottom: 0;
     }
 }

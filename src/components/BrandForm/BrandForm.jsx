@@ -56,7 +56,7 @@ const Brandform = () => {
         
       <div className='infy-heading'>
         <h1>Connect with Influencers</h1>
-        <p>Become A Part of socialpubli family</p>
+        {/* <p>Become A Part of socialpubli family</p> */}
       </div>
       <div className="form-wrapper m-0" method="POST">
         <div className="instaId">

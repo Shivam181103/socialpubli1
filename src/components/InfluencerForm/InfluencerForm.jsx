@@ -80,9 +80,8 @@ const Influencerpage = () => {
       <div className="influencerPage-wrapper m-0">
         <div className='infy-heading'>
           <h1>Become A FameTroop</h1>
-          <p>To Become A Part of socialpubli FameTroop</p>
-        </div>
-        <div className="form-wrapper m-0" method="POST">
+            </div>
+        <div className="form-wrapper influ-form m-0" method="POST">
           <div className="instaId">
             <input type="text" name='instaId' required value={userData.instaId} onChange={postUserData} />
             <label>Insta-Id<span>*</span></label>
