@@ -292,7 +292,7 @@ const HomeLanding = () => {
                     <div> <div className='background-heading'>  <h1  >SOCIAL EXPERIMENTAL</h1></div>   <h1 data-text="SOCIAL EXPERIMENTAL" className="big-heading">SOCIAL EXPERIMENTAL</h1></div>
                     <div><div className='background-heading'> <h1  >PERFORMANCE MARKETING & MEDIA</h1></div>  <h1 data-text="PERFORMANCE MARKETING & MEDIA" className="big-heading">PERFORMANCE MARKETING & MEDIA</h1></div>
                     <div> <div className='background-heading'> <h1  >CREATIVE CONTENT</h1> </div>  <h1 data-text="CREATIVE CONTENT" className="big-heading">CREATIVE CONTENT</h1></div>
-                    <div><div className='background-heading'> <h1  >RACKING & MEASURMENTS WITH INFLUSOFT</h1> </div>   <h1 data-text="TRACKING & MEASURMENTS WITH INFLUSOFT" className="big-heading">TRACKING & MEASURMENTS WITH INFLUSOFT</h1></div>
+                    <div><div className='background-heading'> <h1  >TRACKING & MEASURMENTS WITH INFLUSOFT</h1> </div>   <h1 data-text="TRACKING & MEASURMENTS WITH INFLUSOFT" className="big-heading">TRACKING & MEASURMENTS WITH INFLUSOFT</h1></div>
                     <div><div className='background-heading'> <h1  >STRATEGY</h1> </div>  <h1 data-text="STRATEGY" className="big-heading"> STRATEGY</h1></div>
                     <div> <div className='background-heading'><h1  >VIEW ALL..</h1> </div> <h1 data-text="VIEW ALL.." className="big-heading"> VIEW ALL..</h1></div>
                 </div>
