@@ -24,10 +24,10 @@ h1,h2,h3,h4,p{
 .landing-page>div{
       margin: 2rem;
       padding: 1rem;
-      width: 22rem;
+      width: 23rem;
       color: white;
       border-radius: 20px;
-      height: 22rem;
+      height: 23rem;
        display: flex;
        flex-direction: column;
     
@@ -54,14 +54,16 @@ h1,h2,h3,h4,p{
     color: white;
 }
 .landing-page>div>h1{
-    font-size: 3.7rem;
+    font-size: 3.4rem;
+    margin: 1rem;
+    margin-top: 2.5rem;
 }
 
 .landing-page>div>button{
    
-    margin: 1.5rem;
+    margin: 1rem;
     margin-bottom: 3rem;
-    width: calc( 100% - 3rem );
+    width: calc( 100% - 2rem );
     border: none;
     height: 2.7rem;
      border: 3px solid white;
@@ -155,6 +157,7 @@ h1,h2,h3,h4,p{
  .background-heading{
      position: absolute;
       top: 0rem;
+      margin-top:-1.5rem ;
       left: 0;
       display: none;
       width: 100%;
@@ -200,7 +203,7 @@ h1,h2,h3,h4,p{
     cursor: pointer;
     font-size: 4rem;
      margin-bottom: -0.2rem;
-height: 100%;
+     height: 100%;
      text-align: center;
    
  }
@@ -235,34 +238,30 @@ height: 100%;
 
   .our-influencer-wrapper>.influencers{
       display: flex;
-      position: relative;
-      height: 37rem;
-      width: 50%;
-      padding: 3rem ;
+      overflow: hidden;
+      height: 35rem;
+      /* background-color: #AA3EA0; */
+      margin: 5rem;
+      width: calc( 50% - 10rem );
+       
   }
-  .influencers>img
-  {
-      position: absolute;
-      height: 25rem;
+  
+  .influencers>div{
+      width: 100%;
+      height: 35rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
-   .brand1{
-       left: 4.5rem;
-       top: 4.5rem;
-   }
-   .brand2{
-       left: 6rem;
-       top: 6rem;
-   }
-   
-   .brand5{
-       left: 7.5rem;
-       top: 7.5rem;
-   }
+  .influencer-img{
+      width: 100%;
+      height: auto;
+  }
    .influencer-data{
-       padding: 3rem;
+       
        color: white;
        width: 50%;
-       height: 37rem;
+       
        display: flex;
        flex-direction: column;
        justify-content: center;
@@ -304,7 +303,9 @@ height: 100%;
      margin: 10%;
     width: 80%;
     
-    transition: imgmove 1s ease-in;
+    animation: imgmove 1s ease-in;
+    animation-fill-mode: backwards;
+   
 }
 
 @keyframes imgmove{
@@ -313,7 +314,7 @@ height: 100%;
        height: 0;
     }
     to{
-height: auto;
+height: 100%;
     }
 }
  
@@ -343,32 +344,11 @@ height: auto;
     
 }
 
- 
-
   
- /* .global-text-cont>div>h1 {
-     
-    font-weight: 700;
-  
-    background: linear-gradient(to right, #F15A24 , #F7931E  );;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Georama', sans-serif;
-    font-weight: 700;
-    -webkit-text-stroke-width:0.6px;
-    -webkit-text-stroke-color: #fff;
-     font-size:3.6rem;
-     
-    } */
-    /* .global-head{
-      transition: mymove1 1.6s ease;
-
-  } */
  
  .global-text-cont>div>div{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     position: relative;
-  animation: mymove 0.7s ease-out;
+  animation: mymove 1s ease-out;
   color: white;
   transition-timing-function: ease;
 
@@ -387,9 +367,12 @@ height: auto;
 }
  @keyframes mymove {
     from {opacity: 0;
-    transform: rotateX(90deg);}
+    transform: rotateX(-90deg);
+ 
+}
     to {opacity:  1;
-    transform: rotateX(0deg);  }
+    transform: rotateX(0deg); 
+    }
   }
  .clients-wrapper{
     background-image: url('../../IMAGES1//website_bg.jpg');
@@ -750,18 +733,47 @@ img.joinus{
       height: auto;
       
   }
-  div.influencers{
-      width: 100%;
-      height: 0;
-      margin-bottom: -15rem;
-      padding: 0 ;
-      margin-left: -1rem;
-  }
-  .influencers>img{
-      width: 13rem;
+  
+  .influencer-cont{
+      display: flex;
+      flex-direction: column;
       height: auto;
+      width: 100%;
+  }
+  .influencer-cont>div{
+      width: 100%;
+
+  }
+  .influencer-cont>div> img{
+      margin: 1rem;
+      width: calc( 100% - 2rem );
+  }
+  .influencer-data{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 0;
   }
 
+  .influencer-data>div{
+      padding: 1rem;
+
+  }
+.influencer-data>div> h1{
+    font-size: 2.5rem;
+    background: white;
+    
+    background-clip: text;
+   -webkit-text-stroke-width:0.4px;
+   -webkit-text-stroke-color:   white  ;
+    padding: 0;
+    margin: 0;
+
+}
+
+.influencer-data>div>h3{
+    font-size: 0.8rem;
+}
   .client-heading>div>h1{
     font-size: 3rem;
   }

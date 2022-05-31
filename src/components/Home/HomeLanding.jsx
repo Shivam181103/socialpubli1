@@ -15,9 +15,7 @@ import marketingService from '../../IMAGES1/digital_marketing.jpg'
 import talentImg from '../../IMAGES1/talent_services.jpg'
 import brand1 from '../../IMAGES1/brand_1.jpg';
 import brand2 from '../../IMAGES1/brand_2.jpg';
-import brand3 from '../../IMAGES1/brand_3.jpg';
-import brand4 from '../../IMAGES1/brand_4.jpg';
-import brand5 from '../../IMAGES1/brand_5.jpg';
+import brand3 from '../../IMAGES1/brand_5.jpg';
 import Navbar from './Navbar'
 import brandlogo1 from '../../IMAGES1/boat.png'
 import brandlogo2 from '../../IMAGES1/bombay.png'
@@ -26,18 +24,41 @@ import brandlogo4 from '../../IMAGES1/oppo.png'
 import brandlogo5 from '../../IMAGES1/rapido.png'
 import brandlogo6 from '../../IMAGES1/snapchat.png'
 import brandlogo7 from '../../IMAGES1/zara.png'
- import brandlogo8 from '../../IMAGES1/prime1.png'
+import brandlogo8 from '../../IMAGES1/prime1.png'
 import Slider from "react-slick";
 
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import Globals from 'react-reveal/globals'
 
-const GlobalCont =()=>{
+const influencerData = [
+
+    {
+        key:0,
+        influecer: 25,
+        post: 25,
+        reach: '800+'
+
+    }, {
+        key:1,
+        influecer: 55,
+        post: 45,
+        reach: '7000+'
+    }, {
+        key:2,
+        influecer: 89,
+        post: 125,
+        reach: '14000+'
+    }
+]
+
+
+
+const GlobalCont = () => {
     const [restImg, setrestImg] = useState([talentImg, marketingService]);
     const [activeImg, setActiveImg] = useState(marketingService);
-    const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2, brand3, brand4]);
-    const [influenceractiveImg, setinfluenceractiveImg] = useState(brand5);
+    const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2]);
+    const [influenceractiveImg, setinfluenceractiveImg] = useState(brand3);
     const [globalTextClass, setglobalTextClass] = useState('');
     const changeUI = (e) => {
         setglobalTextClass('global-head')
@@ -64,69 +85,82 @@ const GlobalCont =()=>{
             setActiveImg(plateformTechImg)
         }
     }
-    if(window.innerWidth <= 625){
-return (
-    <>
-     <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
-                            <img src={marketingService} alt="" />
-                                <div>
-                                    <h1>MARKETING SERVICE</h1>
-                                    <p> Data-driven Creator campaigns drive measurable growth and integrated
-                                        strategies that maximizes your media spend and gives you
-                                        full-service content creation and monetization across the internet.</p></div>
-                          
-                        </div>
-                        <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
-                           <img src={talentImg} alt="" />
-                                <div>
-                                    <h1>TALENT SERVICE</h1>
-                                    <p> We provide full service creator management and brand partnership
-                                        unbeatable influencer marketing and media for influencers and brands.</p></div>
-                             
-                        </div>
-                        <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
-                           <img src={plateformTechImg} alt="" />
-                                <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
-                                    with the help of our data and ai based next gen marketing
-                                    tools.</p></div>
-                            
-                        </div>
-    </>
-);
-    }
-    else{
+    if (window.innerWidth <= 625) {
         return (
             <>
-            <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
-                            <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
-                            {
-                                activeImg === marketingService &&
-                                <div>
-                                    <h1>MARKETING SERVICE</h1>
-                                    <p> Data-driven Creator campaigns drive measurable growth and integrated
-                                        strategies that maximizes your media spend and gives you
-                                        full-service content creation and monetization across the internet.</p></div>
-                            }
-                        </div>
-                        <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
-                            <h1 style={{ display: activeImg === talentImg ? 'none' : 'block' }} className={globalTextClass} id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
-                            {
-                                activeImg === talentImg &&
-                                <div>
-                                    <h1>TALENT SERVICE</h1>
-                                    <p> We provide full service creator management and brand partnership
-                                        unbeatable influencer marketing and media for influencers and brands.</p></div>
-                            }
-                        </div>
-                        <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
-                            <h1 style={{ display: activeImg === plateformTechImg ? 'none' : 'block' }} className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
-                            {
-                                activeImg === plateformTechImg &&
-                                <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
-                                    with the help of our data and ai based next gen marketing
-                                    tools.</p></div>
-                            }
-                        </div>
+                <div className="global-text-cont">
+                    <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
+                        <img src={marketingService} alt="" />
+                        <div>
+                            <h1>MARKETING SERVICE</h1>
+                            <p> Data-driven Creator campaigns drive measurable growth and integrated
+                                strategies that maximizes your media spend and gives you
+                                full-service content creation and monetization across the internet.</p></div>
+
+                    </div>
+                    <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
+                        <img src={talentImg} alt="" />
+                        <div>
+                            <h1>TALENT SERVICE</h1>
+                            <p> We provide full service creator management and brand partnership
+                                unbeatable influencer marketing and media for influencers and brands.</p></div>
+
+                    </div>
+                    <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
+                        <img src={plateformTechImg} alt="" />
+                        <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
+                            with the help of our data and ai based next gen marketing
+                            tools.</p></div>
+
+                    </div>
+                </div>
+            </>
+        );
+    }
+    else {
+        return (
+            <>
+                <div>
+
+                    <img src={activeImg} alt="" />
+
+                </div>
+
+
+
+                <div className="global-text-cont ">
+
+                    <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
+                        <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
+                        {
+                            activeImg === marketingService &&
+                            <div>
+                                <h1>MARKETING SERVICE</h1>
+                                <p> Data-driven Creator campaigns drive measurable growth and integrated
+                                    strategies that maximizes your media spend and gives you
+                                    full-service content creation and monetization across the internet.</p></div>
+                        }
+                    </div>
+                    <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
+                        <h1 style={{ display: activeImg === talentImg ? 'none' : 'block' }} className={globalTextClass} id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
+                        {
+                            activeImg === talentImg &&
+                            <div>
+                                <h1>TALENT SERVICE</h1>
+                                <p> We provide full service creator management and brand partnership
+                                    unbeatable influencer marketing and media for influencers and brands.</p></div>
+                        }
+                    </div>
+                    <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
+                        <h1 style={{ display: activeImg === plateformTechImg ? 'none' : 'block' }} className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
+                        {
+                            activeImg === plateformTechImg &&
+                            <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
+                                with the help of our data and ai based next gen marketing
+                                tools.</p></div>
+                        }
+                    </div>
+                </div>
             </>
         );
     }
@@ -136,11 +170,13 @@ const HomeLanding = () => {
     const navigate = useNavigate();
     const [restImg, setrestImg] = useState([talentImg, marketingService]);
     const [activeImg, setActiveImg] = useState(marketingService);
-    const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2, brand3, brand4]);
-    const [influenceractiveImg, setinfluenceractiveImg] = useState(brand5);
+    const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2]);
+    const [influenceractiveImg, setinfluenceractiveImg] = useState(brand3);
     const [globalTextClass, setglobalTextClass] = useState('');
-
-
+     const [influencerKey, setinfluencerKey] = useState(0);
+     const [influencers, setinfluencers] = useState(25);
+     const [posts, setposts] = useState(25)
+     const [reach, setreach] = useState('800+')
     const changeUI = (e) => {
         setglobalTextClass('global-head')
 
@@ -210,12 +246,22 @@ const HomeLanding = () => {
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
+        autoplay:true,
+        autoplaySpeed:2000,
+
         swipeToSlide: true,
         beforeChange: function (currentSlide, nextSlide) {
             console.log("before change", currentSlide, nextSlide);
         },
         afterChange: function (currentSlide) {
-            console.log("after change", currentSlide);
+             const key = influencerKey;
+             const newKey = (key+1);
+             console.log(  key)
+             const newInfluencer = influencerData[newKey % 3];
+             setinfluencerKey(newInfluencer.key);
+             setposts(newInfluencer.post);
+             setinfluencers(newInfluencer.influecer);
+             setreach(newInfluencer.reach)
         }
     };
     return (
@@ -250,7 +296,7 @@ const HomeLanding = () => {
                                     <>
                                         <img className='left' src={leftqoutemark} alt="" />
                                         <p >
-                                        Socialpubli is india's fastest growing influencer marketing company. We use latest technologies and AI driven decisions to generate higher engagements. We use lots of data to run and track the campaign. Our decisions are precisely derived from the market trends & demands                                        </p>
+                                            Socialpubli is india's fastest growing influencer marketing company. We use latest technologies and AI driven decisions to generate higher engagements. We use lots of data to run and track the campaign. Our decisions are precisely derived from the market trends & demands                                        </p>
                                         <img className='right' src={rightqoutemark} alt="" />
                                     </>
                             }
@@ -271,18 +317,9 @@ const HomeLanding = () => {
             </div>
             <div className="plateform-wrapper">
                 <div className="global  ">
-                {   window.innerWidth > 625&&
-                    <div>
 
-                        <img src={activeImg} alt="" />
+                    <GlobalCont />
 
-                    </div>
-                 
-                }
-
-                    <div className="global-text-cont ">
-                        <GlobalCont/>
-                    </div>
                 </div>
             </div>
             <div className="big-heading-links-wrapper">
@@ -308,14 +345,15 @@ const HomeLanding = () => {
                 </div>
             </div>
             <div className="our-influencer-wrapper ">
-                <div className="influencers ">
-                    <img className='brand brand1' src={influencerrestImg[0]} alt="" />
-                    <img className='brand brand2' src={influencerrestImg[1]} alt="" />
-                    
-                    <img className='brand brand5' src={influenceractiveImg} alt="" />
-
-                </div>
-                <div className="influencer-data">
+              
+              {
+                  window.innerWidth <= 625 ?
+                   
+                     <>
+                <div className="influencer-cont">
+                    <div >
+                        <img src={influenceractiveImg} alt="" />
+                        <div className="influencer-data">
                     <div className="influencer">
                         <h1>25</h1>
                         <h3>INFLUENCER</h3>
@@ -329,6 +367,80 @@ const HomeLanding = () => {
                         <h3>ENGAGEMENTS</h3>
                     </div>
                 </div>
+
+                    </div>
+                    <div  >
+                        <img src={influencerrestImg[0]} alt="" />
+                        <div className="influencer-data">
+                    <div className="influencer">
+                        <h1>55</h1>
+                        <h3>INFLUENCER</h3>
+                    </div>
+                    <div className="posts">
+                        <h1>45</h1>
+                        <h3>POSTS</h3>
+                    </div>
+                    <div className="engagements">
+                        <h1>7000+</h1>
+                        <h3>ENGAGEMENTS</h3>
+                    </div>
+                </div>
+
+                    </div>
+                    <div  >
+                        <img src={plateformTechImg} alt="" />
+                        <div className="influencer-data">
+                    <div className="influencer">
+                        <h1>89</h1>
+                        <h3>INFLUENCER</h3>
+                    </div>
+                    <div className="posts">
+                        <h1>125</h1>
+                        <h3>POSTS</h3>
+                    </div>
+                    <div className="engagements">
+                        <h1>14000+</h1>
+                        <h3>ENGAGEMENTS</h3>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+             
+                  </>
+                  :
+                  <>
+                   <div className="influencers ">
+                <Slider {...settings}>
+          <div>
+             <img className='influencer-img' src={influenceractiveImg} alt="" />
+          </div>
+          <div>
+          <img className='influencer-img' src={influencerrestImg[0]} alt="" />
+          </div>
+          <div>
+          <img className='influencer-img' src={influencerrestImg[1]} alt="" />
+          </div>
+           
+        </Slider>
+                </div>
+                <div className="influencer-data">
+                    <div className="influencer">
+                        <h1>{influencers}</h1>
+                        <h3>INFLUENCER</h3>
+                    </div>
+                    <div className="posts">
+                        <h1>{posts}</h1>
+                        <h3>POSTS</h3>
+                    </div>
+                    <div className="engagements">
+                        <h1>{reach}</h1>
+                        <h3>ENGAGEMENTS</h3>
+                    </div>
+                </div>
+                  </>
+              }
+               
             </div>
             <div className="clients-wrapper">
 
@@ -353,7 +465,7 @@ const HomeLanding = () => {
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img style={{background:'white'}} src={brandlogo2} alt="" />
+                                <img style={{ background: 'white' }} src={brandlogo2} alt="" />
                             </div>
                         </div>
                         <div>
@@ -382,7 +494,7 @@ const HomeLanding = () => {
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img style={{background:'white'}} src={brandlogo7} alt="" />
+                                <img style={{ background: 'white' }} src={brandlogo7} alt="" />
 
                             </div>
                         </div>
