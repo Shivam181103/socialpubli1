@@ -174,15 +174,19 @@ padding: 1rem 0;
   font-weight:300;
   font-size: 20px;
   left: 0;
+  padding:0 0.3rem ;
   color: #fff;
   display: inline-block;
   padding-right: 5px;
+ 
 }
 
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }
-
+.footer-links>a{
+	transition: all 0.2s ease-out;
+}
 .footer-links>a:hover{
   color: #f8971d;
 }
@@ -199,8 +203,11 @@ padding: 1rem 0;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
+	transition: all 0.2s ease-in;
 }
-
+.footer-company-about:hover{
+	color: #bbc1c7 ;
+}
 .footer-distributed .footer-company-about span{
 	display: block;
 	color:  #ffffff;
@@ -225,7 +232,7 @@ padding: 1rem 0;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
+	transition: all 0.2s ease-in;
 	margin-right: 3px;
 	margin-bottom: 5px;
 }

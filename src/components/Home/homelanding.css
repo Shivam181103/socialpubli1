@@ -808,6 +808,13 @@ img.joinus{
     width: calc( 100% - 2rem );
    
 }
+.ready-to-join-us form{
+    height: 4rem;
+}
+.ready-to-join-us form button{
+    font-size: 1rem;
+    height: 2.5rem;
+}
 .global-text-cont>div>div{
     margin: 1rem;
     margin-top: -3rem;
