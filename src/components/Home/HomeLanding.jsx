@@ -19,10 +19,118 @@ import brand3 from '../../IMAGES1/brand_3.jpg';
 import brand4 from '../../IMAGES1/brand_4.jpg';
 import brand5 from '../../IMAGES1/brand_5.jpg';
 import Navbar from './Navbar'
+import brandlogo1 from '../../IMAGES1/boat.png'
+import brandlogo2 from '../../IMAGES1/bombay.png'
+import brandlogo3 from '../../IMAGES1/netflix.png'
+import brandlogo4 from '../../IMAGES1/oppo.png'
+import brandlogo5 from '../../IMAGES1/rapido.png'
+import brandlogo6 from '../../IMAGES1/snapchat.png'
+import brandlogo7 from '../../IMAGES1/zara.png'
+ import brandlogo8 from '../../IMAGES1/prime1.png'
 import Slider from "react-slick";
- 
-import {Link} from 'react-router-dom'
+
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import Globals from 'react-reveal/globals'
+
+const GlobalCont =()=>{
+    const [restImg, setrestImg] = useState([talentImg, marketingService]);
+    const [activeImg, setActiveImg] = useState(marketingService);
+    const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2, brand3, brand4]);
+    const [influenceractiveImg, setinfluenceractiveImg] = useState(brand5);
+    const [globalTextClass, setglobalTextClass] = useState('');
+    const changeUI = (e) => {
+        setglobalTextClass('global-head')
+
+        if (e.target.id === 'first') {
+            setrestImg(
+                [talentImg, plateformTechImg]
+            )
+            setActiveImg(marketingService)
+
+        }
+        else if (e.target.id === 'second') {
+            setrestImg(
+                [marketingService, plateformTechImg]
+            )
+            setActiveImg(talentImg)
+
+        }
+        else {
+            setrestImg(
+                [talentImg, marketingService]
+            )
+
+            setActiveImg(plateformTechImg)
+        }
+    }
+    if(window.innerWidth <= 625){
+return (
+    <>
+     <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
+                            <img src={marketingService} alt="" />
+                                <div>
+                                    <h1>MARKETING SERVICE</h1>
+                                    <p> Data-driven Creator campaigns drive measurable growth and integrated
+                                        strategies that maximizes your media spend and gives you
+                                        full-service content creation and monetization across the internet.</p></div>
+                          
+                        </div>
+                        <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
+                           <img src={talentImg} alt="" />
+                                <div>
+                                    <h1>TALENT SERVICE</h1>
+                                    <p> We provide full service creator management and brand partnership
+                                        unbeatable influencer marketing and media for influencers and brands.</p></div>
+                             
+                        </div>
+                        <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
+                           <img src={plateformTechImg} alt="" />
+                                <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
+                                    with the help of our data and ai based next gen marketing
+                                    tools.</p></div>
+                            
+                        </div>
+    </>
+);
+    }
+    else{
+        return (
+            <>
+            <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
+                            <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
+                            {
+                                activeImg === marketingService &&
+                                <div>
+                                    <h1>MARKETING SERVICE</h1>
+                                    <p> Data-driven Creator campaigns drive measurable growth and integrated
+                                        strategies that maximizes your media spend and gives you
+                                        full-service content creation and monetization across the internet.</p></div>
+                            }
+                        </div>
+                        <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
+                            <h1 style={{ display: activeImg === talentImg ? 'none' : 'block' }} className={globalTextClass} id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
+                            {
+                                activeImg === talentImg &&
+                                <div>
+                                    <h1>TALENT SERVICE</h1>
+                                    <p> We provide full service creator management and brand partnership
+                                        unbeatable influencer marketing and media for influencers and brands.</p></div>
+                            }
+                        </div>
+                        <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
+                            <h1 style={{ display: activeImg === plateformTechImg ? 'none' : 'block' }} className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
+                            {
+                                activeImg === plateformTechImg &&
+                                <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
+                                    with the help of our data and ai based next gen marketing
+                                    tools.</p></div>
+                            }
+                        </div>
+            </>
+        );
+    }
+}
 const HomeLanding = () => {
 
     const navigate = useNavigate();
@@ -30,70 +138,73 @@ const HomeLanding = () => {
     const [activeImg, setActiveImg] = useState(marketingService);
     const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2, brand3, brand4]);
     const [influenceractiveImg, setinfluenceractiveImg] = useState(brand5);
-const [globalTextClass, setglobalTextClass] = useState('');
+    const [globalTextClass, setglobalTextClass] = useState('');
 
 
     const changeUI = (e) => {
+        setglobalTextClass('global-head')
 
-        
         if (e.target.id === 'first') {
             setrestImg(
                 [talentImg, plateformTechImg]
             )
             setActiveImg(marketingService)
+
         }
         else if (e.target.id === 'second') {
             setrestImg(
                 [marketingService, plateformTechImg]
             )
             setActiveImg(talentImg)
+
         }
         else {
             setrestImg(
                 [talentImg, marketingService]
             )
+
             setActiveImg(plateformTechImg)
         }
     }
     const settings1 = {
-        dots:true,
-        arrows:false,
-        infinite:true,
-        slidesToShow:4,
-        slidesToScroll:1,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         swipeToSlide: true,
-        autoplay:true,
-        autoplaySpeed:2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                initialSlide: 1
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     }
     const settings = {
         dots: true,
-        arrows:false,
+        arrows: false,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -133,15 +244,13 @@ const [globalTextClass, setglobalTextClass] = useState('');
                                 window.innerWidth <= 625 ?
                                     <p >
                                         <img className='left' src={leftqoutemark} alt="" />
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.
-                                        <img className='right' src={rightqoutemark} alt="" />
+                                        Socialpubli is india's fastest growing influencer marketing company. We use latest technologies and AI driven decisions to generate higher engagements. We use lots of data to run and track the campaign. Our decisions are precisely derived from the market trends & demands                                        <img className='right' src={rightqoutemark} alt="" />
                                     </p>
                                     :
                                     <>
                                         <img className='left' src={leftqoutemark} alt="" />
                                         <p >
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dignissimos culpa ab vel? Itaque, alias.  ipsum dolor sit amet consectetur adipisicing elit. Illum placeat nam id voluptatum autem voluptate dignissimos, ipsa dolore eos voluptatibus, sint cumque ut error saepe consequuntur deserunt quod harum. Pariatur.
-                                        </p>
+                                        Socialpubli is india's fastest growing influencer marketing company. We use latest technologies and AI driven decisions to generate higher engagements. We use lots of data to run and track the campaign. Our decisions are precisely derived from the market trends & demands                                        </p>
                                         <img className='right' src={rightqoutemark} alt="" />
                                     </>
                             }
@@ -161,45 +270,18 @@ const [globalTextClass, setglobalTextClass] = useState('');
                 </div>
             </div>
             <div className="plateform-wrapper">
-                <div className="global  "> 
-                {/* <Slider {...settings}> */}
-          <div>
-             
-                 <img src={activeImg} alt="" />
-             
-          </div>
-          {/* <div>
-          <img src={activeImg} alt="" />
-          </div>
-          <div>
-          <img src={activeImg} alt="" />
-          </div>
-         </Slider> */}
+                <div className="global  ">
+                {   window.innerWidth > 625&&
+                    <div>
 
+                        <img src={activeImg} alt="" />
 
+                    </div>
+                 
+                }
 
                     <div className="global-text-cont ">
-                        <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
-                            <h1 className={globalTextClass}  id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
-                            {
-                                activeImg === marketingService&& 
-                                <div> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum distinctio, cum quae dicta repellat blanditiis ipsam consectetur ex voluptas?</p></div>
-                            }
-                        </div>
-                        <div style={{width:'100%'}} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
-                            <h1  className={globalTextClass}  id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
-                            {
-                                activeImg === talentImg && 
-                                <div> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum distinctio, cum quae dicta repellat blanditiis ipsam consectetur ex voluptas?</p></div>
-                            }
-                        </div>
-                        <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
-                            <h1  className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
-                            {
-                                activeImg === plateformTechImg&& 
-                                <div> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum distinctio, cum quae dicta repellat blanditiis ipsam consectetur ex voluptas?</p></div>
-                            }
-                        </div>
+                        <GlobalCont/>
                     </div>
                 </div>
             </div>
@@ -229,8 +311,7 @@ const [globalTextClass, setglobalTextClass] = useState('');
                 <div className="influencers ">
                     <img className='brand brand1' src={influencerrestImg[0]} alt="" />
                     <img className='brand brand2' src={influencerrestImg[1]} alt="" />
-                    <img className='brand brand3' src={influencerrestImg[2]} alt="" />
-                    <img className='brand brand4' src={influencerrestImg[3]} alt="" />
+                    
                     <img className='brand brand5' src={influenceractiveImg} alt="" />
 
                 </div>
@@ -266,33 +347,52 @@ const [globalTextClass, setglobalTextClass] = useState('');
                     <Slider {...settings1}>
                         <div>
                             <div className="brands-img-wrap">
-                                <img src={brand} alt="" />
+                                <img src={brandlogo1} alt="" />
 
                             </div>
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img src={brand} alt="" />
+                                <img style={{background:'white'}} src={brandlogo2} alt="" />
                             </div>
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img src={brand} alt="" />
+                                <img src={brandlogo3} alt="" />
 
                             </div>
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img src={brand} alt="" />
+                                <img src={brandlogo4} alt="" />
 
                             </div>
                         </div>
                         <div>
                             <div className="brands-img-wrap">
-                                <img src={brand} alt="" />
+                                <img src={brandlogo5} alt="" />
 
                             </div>
                         </div>
+                        <div>
+                            <div className="brands-img-wrap">
+                                <img src={brandlogo6} alt="" />
+
+                            </div>
+                        </div>
+                        <div>
+                            <div className="brands-img-wrap">
+                                <img style={{background:'white'}} src={brandlogo7} alt="" />
+
+                            </div>
+                        </div>
+                        <div>
+                            <div className="brands-img-wrap">
+                                <img src={brandlogo8} alt="" />
+
+                            </div>
+                        </div>
+
 
 
                     </Slider>
