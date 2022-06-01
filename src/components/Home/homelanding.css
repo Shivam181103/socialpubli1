@@ -38,20 +38,24 @@ h1,h2,h3,h4,p{
 .influencer-page-cont{
     
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
+ 
 }
  
 .influencer-page-cont button:hover{
     background: linear-gradient(to bottom, #DB422E  ,#E7682F );
     box-shadow: white 0px 1px 25px 2px;
     color: white;
+    transform: scale(1.05);
 }
 .brand-page-cont{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
+    
 }
 .brand-page-cont button:hover{
     background: linear-gradient(to top,#e965dc  , #AA3EA0 );
     box-shadow: white 0px 1px 25px 2px;
     color: white;
+    transform: scale(1.05);
 }
 .landing-page>div>h1{
     font-size: 3.4rem;
@@ -78,6 +82,7 @@ h1,h2,h3,h4,p{
 .landing-page>div>button{
     background: white;
     color: black;
+    transition: all 0.3s ease;
 }
 .quote-wrapper{
 
