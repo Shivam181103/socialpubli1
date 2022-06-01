@@ -13,6 +13,8 @@
    
     right: 3rem;
     font-size: 1.5rem; 
+    z-index: 111;
+    border: none;
 
 }
 .nav-logo{
@@ -23,7 +25,7 @@
 .navbar-nav-items{
     margin-right: 1rem;
 }
-.navbar-nav-items>li>a{
+.navbar-nav-items>li>*{
     color: #F7961D;
     font-size: 16px;
     font-weight: 600;
@@ -31,7 +33,10 @@
     padding: 0;
 }
 
+.top-contact p{
+    color: lightgray;
 
+}
 @media (max-width:625px){
     
     .nav-logo{
@@ -47,7 +52,12 @@
         margin-top: 5rem;
         margin-right: 1rem;
     }
-    .nav-collapse-custom ul li>a{
+    .nav-collapse-custom ul li>Link{
         font-size: 1.5rem;
+    }
+
+    .top-contact>div>p { 
+      font-size: 11px;
+     
     }
 }

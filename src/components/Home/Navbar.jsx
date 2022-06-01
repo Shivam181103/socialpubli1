@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import "./Navbar.css"
 import logo from '../../IMAGES1/png-logo.png';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
    
    return (
      <>
        <div className=" nav-wrapper-custom nav-container bg-transparent  navbar-dark ">
-      <a  class="nav-logo navbar-brand" href="#"><img style={{ width:'9rem', fill:'red'}} src={logo} alt="" /></a>
+      <Link to='/' class="nav-logo navbar-brand" ><img style={{ width:'9rem', fill:'red'}} src={logo} alt="" /></Link>
        <nav class="navbar navbar-expand-lg    ">
   <div class="container-fluid">
     <button class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,22 +16,22 @@ const Navbar = () => {
     <div class="collapse navbar-collapse nav-collapse-custom" id="navbarNav">
       <ul class="navbar-nav  navbar-nav-items ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <Link style={{color:'#F7961D'}} to='/underconstruction' class="nav-link active" aria-current="page" >Home</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Services</a>
+          <Link style={{color:'#F7961D'}} to='underconstruction' class="nav-link active" aria-current="page" >Services</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Work</a>
+          <Link style={{color:'#F7961D'}} to='/underconstruction' class="nav-link active" aria-current="page" >Work</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Tools</a>
+          <Link style={{color:'#F7961D'}} to='/underconstruction' class="nav-link active" aria-current="page" >Tools</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About </a>
+          <Link style={{color:'#F7961D'}} to='underconstruction' class="nav-link active" aria-current="page" >About </Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+          <Link style={{color:'#F7961D'}} to='underconstruction' class="nav-link active" aria-current="page" >Contact Us</Link>
         </li>
          
          

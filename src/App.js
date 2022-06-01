@@ -8,15 +8,17 @@ import "./App.css";
 } from "react-router-dom";
 import Brandform from "./components/BrandForm/BrandForm";
 import InfluencerForm from "./components/InfluencerForm/InfluencerForm";
+import Construction from "./components/Construction";
  function App() {
   return (
     <>
       <BrowserRouter>
         
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/brandform" element={<Brandform />} />
           <Route path="/influencerform" element={<InfluencerForm/>} />
+          <Route path="/underconstruction" element={<Construction/>} />
             
         </Routes>
         
