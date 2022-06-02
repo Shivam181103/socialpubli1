@@ -355,7 +355,7 @@ const HomeLanding = () => {
                             <button onClick={() => navigate("/brandform")} >Click Here</button>
                         </div>
                         <div className="col col-mg-6 col-sm-6 col-xm-12  influencer-page-cont">
-                            <h1> I AM  INFLUENCER</h1>
+                            <h1> I AM  <br /><span> INFLUENCER </span></h1>
                             <button onClick={() => navigate("/influencerform")}>Click Here</button>
                         </div>
                     </div>

@@ -887,3 +887,10 @@ img.joinus{
    color: white;
 }
 }
+
+@media (max-width: 380px){
+
+    .influencer-page-cont span{
+        font-size: 2.7rem;
+    }
+}
