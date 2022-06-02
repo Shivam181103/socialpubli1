@@ -37,7 +37,7 @@ const Footer = () => {
 
 			<div class="footer-center">
 
-				<div>
+		 		<div>
 					<i class="fa me-2 fa-map-marker"></i>
 					<p> 1007 One Indiabulls Park , Jetalpur Road Vadodara , Gujarat</p>
 				</div>
