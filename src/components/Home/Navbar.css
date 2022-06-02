@@ -37,6 +37,11 @@
     color: lightgray;
 
 }
+.contact-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 @media (max-width:625px){
     
     .nav-logo{
@@ -59,5 +64,11 @@
     .top-contact>div>p { 
       font-size: 11px;
      
+    }
+
+    .contact-cont{
+        flex-direction: column;
+       text-align: start;
+       align-items: baseline;
     }
 }

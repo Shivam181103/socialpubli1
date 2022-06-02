@@ -386,6 +386,9 @@ h1,h2,h3,h4,p{
     font-weight: 400;
      
 }
+.global-text-cont>div h1:hover{
+    cursor: pointer;
+}
  @keyframes mymove {
     from {opacity: 0;
     transform: rotateX(-90deg);
@@ -555,17 +558,16 @@ img.joinus{
     .landing-page>div{
         margin:2rem;
         padding:1rem;
-        width: 20rem;
+        width: 18rem;
         color: white;
         border-radius: 20px;
-        height: 20rem;
-         display: flex;
-         flex-direction: column;
-      
+        height: 18rem;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
   }
   .landing-page>div>h1{
-      font-size: 3rem;
+        font-size: 3rem;
   }
   .quote-wrapper{
       position: relative;
@@ -623,6 +625,7 @@ img.joinus{
      flex-direction: column;
      align-items: center;
  }
+ 
 .global-img-cont>img{
     width:10rem;
     height: auto;
@@ -742,6 +745,9 @@ img.joinus{
 .global-tech-cont{
     height: auto;
 }
+.small-text-cont{
+    padding: 2rem;
+}
  .small-text-cont>p{
      font-size: 1.3rem;
      padding-top: 1rem;
@@ -845,6 +851,8 @@ img.joinus{
 }
 .ready-to-join-us form{
     height: 4rem;
+    margin: 0 2rem;
+    width: calc( 100% - 4rem );
 }
 .ready-to-join-us form button{
     font-size: 1rem;
@@ -858,6 +866,7 @@ img.joinus{
  }
  .phone-global-text-cont{
      display: flex;
+    
      flex-direction: column;
  }
 .phone-global-text-cont>div>div{

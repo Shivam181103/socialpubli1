@@ -24,7 +24,7 @@ import brandlogo4 from '../../IMAGES1/oppo.png'
 import brandlogo5 from '../../IMAGES1/rapido.png'
 import brandlogo6 from '../../IMAGES1/snapchat.png'
 import brandlogo7 from '../../IMAGES1/zara.png'
-import brandlogo8 from '../../IMAGES1/prime1.png'
+// import brandlogo8 from '../../IMAGES1/prime1.png'
 import Slider from "react-slick";
 import { Fade, Zoom } from 'react-reveal'
 import { Link } from 'react-router-dom'
@@ -593,12 +593,7 @@ const HomeLanding = () => {
 
                                 </div>
                             </div>
-                            <div>
-                                <div className="brands-img-wrap">
-                                    <img src={brandlogo8} alt="" />
-
-                                </div>
-                            </div>
+                             
 
 
 

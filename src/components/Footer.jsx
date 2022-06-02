@@ -38,12 +38,12 @@ const Footer = () => {
 			<div class="footer-center">
 
 				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>1007 One Indiabulls Park , Jetalpur Road</span>Vadodara , Gujarat</p>
+					<i class="fa me-2 fa-map-marker"></i>
+					<p> 1007 One Indiabulls Park , Jetalpur Road Vadodara , Gujarat</p>
 				</div>
 
 				<div>
-					<i class="fa fa-phone"></i>
+					<i class="fa   fa-phone"></i>
 					<p>9723232454</p>
 				</div>
 
