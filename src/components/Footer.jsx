@@ -17,23 +17,22 @@ const Footer = () => {
                 </Link>
 
 				<p class="footer-links">
-					<Link to="/" class="link-1">Home</Link>
+					<Link to="/" class="link-1">Home |</Link>
 					
-					<Link to="/services">Services</Link>
+					<Link to="/services">Services |</Link>
 				
-					<Link to="/influencer">Work</Link>
+					<Link to="/influencer">Work |</Link>
 				
-					<Link to="/brands">Brands</Link>
+					<Link to="/brands">Brands |</Link>
 					
-					<Link to="/tools">Tools</Link>
+					<Link to="/tools">Tools |</Link>
 					
-					<Link to="/about">About</Link>
+					<Link to="/about">About </Link>
 
           <Link to='/contactus'>Contact</Link>
 				</p>
 
-				<p class="footer-company-name"> SocialPubli © 2022</p>
-			</div>
+ 			</div>
 
 			<div class="footer-center">
 
@@ -49,7 +48,7 @@ const Footer = () => {
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:influencermarketing@soicalpubli.co.in" style={{color:'white'}}>influencermarketing@socialpubli.co.in</a></p>
+					<p><a href="mailto:influencermarketing@soicalpubli.co.in" >influencermarketing@socialpubli.co.in</a></p>
 				</div>
 
 			</div>

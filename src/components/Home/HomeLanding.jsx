@@ -111,45 +111,10 @@ const GlobalCont = () => {
             setActiveImg(plateformTechImg)
         }
     }
-    if (window.innerWidth <= 625) {
+   
         return (
             <>
-                <Zoom>
-                    <div className="phone-global-text-cont">
-                        <div id='first'   defaultValue='marketing' className="text-cont">
-                            <img src={marketingService} alt="" />
-                            <div>
-                                <h1>MARKETING SERVICE</h1>
-                                <p> Data-driven Creator campaigns drive measurable growth and integrated
-                                    strategies that maximizes your media spend and gives you
-                                    full-service content creation and monetization across the internet.</p></div>
-
-                        </div>
-                        <div style={{ width: '100%' }} id='second'  defaultValue='talent' className="text-cont">
-                            <img src={talentImg} alt="" />
-                            <div>
-                                <h1>TALENT SERVICE</h1>
-                                <p> We provide full service creator management and brand partnership
-                                    unbeatable influencer marketing and media for influencers and brands.</p></div>
-
-                        </div>
-                        <div id='third' defaultValue='tech' className="text-cont">
-                            <img src={plateformTechImg} alt="" />
-                            <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
-                                with the help of our data and ai based next gen marketing
-                                tools.</p></div>
-
-                        </div>
-                    </div>
-
-                </Zoom>
-            </>
-        );
-    }
-    else {
-        return (
-            <>
-                <div>
+                <div className='global-img-cont'>
 
                     <GlobalImg
 
@@ -166,7 +131,7 @@ const GlobalCont = () => {
                         <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
                         {
                             activeImg === marketingService &&
-                            <div>
+        <div>
                                 <h1>MARKETING SERVICE</h1>
                                 <p> Data-driven Creator campaigns drive measurable growth and integrated
                                     strategies that maximizes your media spend and gives you
@@ -196,7 +161,7 @@ const GlobalCont = () => {
                 {/* </Zoom> */}
             </>
         );
-    }
+    
 }
 const HomeLanding = () => {
 
@@ -242,8 +207,8 @@ const HomeLanding = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         swipeToSlide: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -265,7 +230,7 @@ const HomeLanding = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             }
@@ -279,8 +244,8 @@ const HomeLanding = () => {
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
 
         swipeToSlide: true,
         beforeChange: function (currentSlide, nextSlide) {
@@ -394,7 +359,7 @@ const HomeLanding = () => {
                     <div className="global-tech-cont">
                         <div className="big-text-cont"><img src={servicetitleImg} alt="" /></div>
                         <div className="small-text-cont">
-                            <h1>Global</h1>
+                            <h1>GLOBAL</h1>
                             <h3>AI-POWERED SERVICES</h3>
                             <h2> & TECHNOLOGIES.</h2>
                         </div>
@@ -439,70 +404,9 @@ const HomeLanding = () => {
             <Zoom>
                 <div className="our-influencer-wrapper ">
 
-                    {
-                        window.innerWidth <= 625 ?
-
-                            <>
-                                <div className="influencer-cont">
-                                    <div >
-                                        <img src={influenceractiveImg} alt="" />
-                                        <div className="influencer-data">
-                                            <div className="influencer">
-                                                <h1>25</h1>
-                                                <h3>INFLUENCER</h3>
-                                            </div>
-                                            <div className="posts">
-                                                <h1>25</h1>
-                                                <h3>POSTS</h3>
-                                            </div>
-                                            <div className="engagements">
-                                                <h1>800+</h1>
-                                                <h3>ENGAGEMENTS</h3>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div  >
-                                        <img src={influencerrestImg[0]} alt="" />
-                                        <div className="influencer-data">
-                                            <div className="influencer">
-                                                <h1>55</h1>
-                                                <h3>INFLUENCER</h3>
-                                            </div>
-                                            <div className="posts">
-                                                <h1>45</h1>
-                                                <h3>POSTS</h3>
-                                            </div>
-                                            <div className="engagements">
-                                                <h1>7000+</h1>
-                                                <h3>ENGAGEMENTS</h3>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div  >
-                                        <img src={plateformTechImg} alt="" />
-                                        <div className="influencer-data">
-                                            <div className="influencer">
-                                                <h1>89</h1>
-                                                <h3>INFLUENCER</h3>
-                                            </div>
-                                            <div className="posts">
-                                                <h1>125</h1>
-                                                <h3>POSTS</h3>
-                                            </div>
-                                            <div className="engagements">
-                                                <h1>14000+</h1>
-                                                <h3>ENGAGEMENTS</h3>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </>
-                            :
-                            <>
+                    
+                       
+                            
                                 <div className="influencers ">
                                     <Slider {...settings}>
                                         <div>
@@ -531,8 +435,8 @@ const HomeLanding = () => {
                                         <h3>ENGAGEMENTS</h3>
                                     </div>
                                 </div>
-                            </>
-                    }
+                           
+                     
 
                 </div>
             </Zoom>
@@ -608,7 +512,7 @@ const HomeLanding = () => {
                     <img className='joinus' src={joinUs} alt="" />
                     <img className='book' src={book} alt="" />
                     <div className="upper-cont">
-                        <h1>READY TO JOIN US ? </h1>
+                        <h1>READY TO <span>JOIN US ?  </span> </h1>
                         <form action="">
                             <input type="email" name="email" id="email" placeholder='Email' />
                             <button type='submit' className='subsribe'>SUBSCRIBE</button>

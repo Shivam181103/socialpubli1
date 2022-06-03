@@ -6,8 +6,8 @@ const Navbar = () => {
    
    return (
      <>
-       <div className=" nav-wrapper-custom nav-container bg-transparent  navbar-dark ">
-      <Link to='/' class="nav-logo navbar-brand" ><img style={{ width:'9rem', fill:'red'}} src={logo} alt="" /></Link>
+       <div className=" nav-wrapper-custom nav-container bg-transparent   ">
+      <Link to='/' class="nav-logo navbar-brand" ><img  src={logo} alt="" /></Link>
        <nav class="navbar navbar-expand-lg    ">
   <div class="container-fluid">
     <button class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

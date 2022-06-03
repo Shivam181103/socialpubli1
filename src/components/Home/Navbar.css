@@ -10,17 +10,28 @@
 .toggler-custom {
      
     position: absolute;
-   
-    right: 3rem;
+    
+    right: 1rem;
     font-size: 1.5rem; 
     z-index: 111;
     border: none;
 
 }
+.toggler-custom>span{
+    color: #F7961D;
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(247,150,29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+     
+}
 .nav-logo{
     position: absolute;
     top: 1rem;
-    left: 2rem;
+    left: 1rem;
+    
+}
+.nav-logo img{
+    width: 9rem;
+     
 }
 .navbar-nav-items{
     margin-right: 1rem;
@@ -47,8 +58,16 @@
     .nav-logo{
         top: 0.2rem;
     }
+    .nav-logo img{
+        width: 7rem;
+    }
     .toggler-custom {
-        top: 1.2rem;
+        top: 0.5rem;
+    }
+    .toggler-custom> span{
+        
+        color: #F7961D;
+        
     }
     .nav-collapse-custom{
         display: flex;
@@ -68,7 +87,11 @@
 
     .contact-cont{
         flex-direction: column;
-       text-align: start;
-       align-items: baseline;
+       text-align: center;
+       align-items: center;
+    }
+    .contact-cont> .contact-num{
+        content: 'Call:';
+        color: #F7961D;
     }
 }
