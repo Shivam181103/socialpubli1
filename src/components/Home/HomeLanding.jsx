@@ -26,7 +26,7 @@ import brandlogo6 from '../../IMAGES1/snapchat.png'
 import brandlogo7 from '../../IMAGES1/zara.png'
 // import brandlogo8 from '../../IMAGES1/prime1.png'
 import Slider from "react-slick";
-import { Fade, Zoom } from 'react-reveal'
+ 
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 // import Globals from 'react-reveal/globals'
@@ -58,23 +58,23 @@ const GlobalImg = (props) => {
 
     if (img.includes('marketing')) {
         return (
-            <>            <Fade duration={1000} top when={true}>
-                <img className='marketingImg' src={props.Img} alt='' />
-            </Fade>
+            <>
+                 <img className='marketingImg' src={props.Img} alt='' />
+            
             </>
 
         )
     }
     else if (img.includes('talent')) {
         return (<>
-            <Fade duration={1000} top when={true}>
-                <img className='talentImg' src={props.Img} alt='' /></Fade></>
+            
+                <img className='talentImg' src={props.Img} alt='' /> </>
         )
     }
     else {
         return (
-            <>            <Fade duration={1000} top when={true}>
-                <img className='techImg' src={props.Img} alt='' /></Fade></>
+            <>            
+                <img className='techImg' src={props.Img} alt='' /> </>
 
         )
     }
@@ -207,8 +207,8 @@ const HomeLanding = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         swipeToSlide: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -244,8 +244,8 @@ const HomeLanding = () => {
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
 
         swipeToSlide: true,
         beforeChange: function (currentSlide, nextSlide) {
@@ -313,7 +313,7 @@ const HomeLanding = () => {
         <>
             <div className="home-landing-container">
                 <Navbar />
-                <Zoom top>
+                 
                     <div className="landing-page row m-0">
                         <div className="col col-mg-6 col-sm-6 col-xm-12  brand-page-cont">
                             <h1> I AM <br /> BRAND</h1>
@@ -324,9 +324,9 @@ const HomeLanding = () => {
                             <button onClick={() => navigate("/influencerform")}>Click Here</button>
                         </div>
                     </div>
-                </Zoom>
+                
             </div>
-            <Zoom>
+           
                 <div id="carouselExampleIndicators" class=" carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
@@ -353,8 +353,8 @@ const HomeLanding = () => {
                     </div>
 
                 </div>
-            </Zoom>
-            <Fade right>
+             
+            
                 <div className="global-tech-wrapper">
                     <div className="global-tech-cont">
                         <div className="big-text-cont"><img src={servicetitleImg} alt="" /></div>
@@ -365,8 +365,8 @@ const HomeLanding = () => {
                         </div>
                     </div>
                 </div>
-            </Fade>
-            {/* <Zoom> */}
+            
+             
             <div className="plateform-wrapper">
                 <div className="global  ">
 
@@ -374,8 +374,7 @@ const HomeLanding = () => {
 
                 </div>
             </div>
-            {/* </Zoom> */}
-            <Fade top>
+             
                 <div className="big-heading-links-wrapper">
 
                     <div className="big-heading-link-cont">
@@ -388,8 +387,7 @@ const HomeLanding = () => {
                         <div> <div className='background-heading'><h1  >VIEW ALL..</h1> </div> <h1 data-text="VIEW ALL.." className="big-heading"> VIEW ALL..</h1></div>
                     </div>
                 </div>
-            </Fade>
-            <Fade left>
+             
                 <div className="global-tech-wrapper">
                     <div className="global-tech-cont">
                         <div className="big-text-cont "><img src={workinactionimg} alt="" /></div>
@@ -400,8 +398,7 @@ const HomeLanding = () => {
                         </div>
                     </div>
                 </div>
-            </Fade>
-            <Zoom>
+             
                 <div className="our-influencer-wrapper ">
 
                     
@@ -439,8 +436,8 @@ const HomeLanding = () => {
                      
 
                 </div>
-            </Zoom>
-            <Fade bottom  >
+             
+             
                 <div className="clients-wrapper">
 
                     <div className="client-heading-wrapper">
@@ -504,8 +501,7 @@ const HomeLanding = () => {
                         </Slider>
                     </div>
                 </div>
-            </Fade>
-            <Fade bottom>
+            
                 <div className="ready-to-join-us">
                     <img className='keyboard' src={keyboard} alt="" />
                     <img className='pen' src={pen} alt="" />
@@ -519,7 +515,7 @@ const HomeLanding = () => {
                         </form>
                     </div>
                 </div>
-            </Fade>
+            
         </>
     )
 }
