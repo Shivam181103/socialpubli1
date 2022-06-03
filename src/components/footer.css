@@ -257,7 +257,9 @@ padding: 1rem 0;
 .footer-icons>.insta:hover{
   background-color: #ff927c;
 }
-
+.footer-distributed .footer-center p>a{
+	color: #fff;
+}
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 720px) {
