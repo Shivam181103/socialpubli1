@@ -26,7 +26,8 @@ import brandlogo6 from '../../IMAGES1/snapchat.png'
 import brandlogo7 from '../../IMAGES1/zara.png'
 // import brandlogo8 from '../../IMAGES1/prime1.png'
 import Slider from "react-slick";
- 
+ import activemark from '../../IMAGES1/view_more1.png'
+ import inactivemark from '../../IMAGES1/view_more.png'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 // import Globals from 'react-reveal/globals'
@@ -52,36 +53,35 @@ const influencerData = [
     }
 ]
 
-const GlobalImg = (props) => {
-    const imgArr = props.Img.split('/');
-    const img = imgArr[imgArr.length - 1]
-
-    if (img.includes('marketing')) {
-        return (
-            <>
-                 <img className='marketingImg' src={props.Img} alt='' />
+// const GlobalImg = (props) => {
+//     const imgArr = props.Img.split('/');
+//     const img = imgArr[imgArr.length - 1]
+//     if (img.includes('marketing')) {
+//         return (
+//             <>
+//                  <img className='marketingImg' src={props.Img} alt='' />
             
-            </>
+//             </>
 
-        )
-    }
-    else if (img.includes('talent')) {
-        return (<>
+//         )
+//     }
+//     else if (img.includes('talent')) {
+//         return (<>
             
-                <img className='talentImg' src={props.Img} alt='' /> </>
-        )
-    }
-    else {
-        return (
-            <>            
-                <img className='techImg' src={props.Img} alt='' /> </>
+//                 <img className='talentImg' src={props.Img} alt='' /> </>
+//         )
+//     }
+//     else {
+//         return (
+//             <>            
+//                 <img className='techImg' src={props.Img} alt='' /> </>
 
-        )
-    }
-}
+//         )
+//     }
+// }
 
 const GlobalCont = () => {
-    const [restImg, setrestImg] = useState([talentImg, marketingService]);
+    const [restImg, setrestImg] = useState([talentImg, plateformTechImg]);
     const [activeImg, setActiveImg] = useState(marketingService);
     const [influencerrestImg, setinfluencerrestImg] = useState([brand1, brand2]);
     const [influenceractiveImg, setinfluenceractiveImg] = useState(brand3);
@@ -115,12 +115,11 @@ const GlobalCont = () => {
         return (
             <>
                 <div className='global-img-cont'>
-
-                    <GlobalImg
-
-                        Img={activeImg}
-                    />
-
+                  <div>
+                    <img className='active-img' src={activeImg} alt="" />
+                    <img className='passive1' src={restImg[0]} alt="" />
+                    <img className='passive2' src={restImg[1]} alt="" />
+                    </div>
                 </div>
 
 
@@ -128,31 +127,31 @@ const GlobalCont = () => {
                 <div className="global-text-cont ">
 
                     <div id='first' onClick={changeUI} defaultValue='marketing' className="text-cont">
-                        <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE</h1>
+                        <h1 style={{ display: activeImg === marketingService ? 'none' : 'block' }} className={globalTextClass} id='first' data-text='MARKETING SERVICE' >MARKETING SERVICE <img className='inactive-mark-img'  src={inactivemark} alt="" /> </h1>
                         {
                             activeImg === marketingService &&
         <div>
-                                <h1>MARKETING SERVICE</h1>
+                                <h1>MARKETING SERVICE <img className='active-mark-img'  src={activemark} alt="" /> </h1>
                                 <p> Data-driven Creator campaigns drive measurable growth and integrated
-                                    strategies that maximizes your media spend and gives you
+                                    strategies that maximizes your media spend and gives you 
                                     full-service content creation and monetization across the internet.</p></div>
                         }
                     </div>
                     <div style={{ width: '100%' }} id='second' onClick={changeUI} defaultValue='talent' className="text-cont">
-                        <h1 style={{ display: activeImg === talentImg ? 'none' : 'block' }} className={globalTextClass} id='second' data-text='TALENT SERVICE'>TALENT SERVICE</h1>
+                        <h1 style={{ display: activeImg === talentImg ? 'none' : 'block' }} className={globalTextClass} id='second' data-text='TALENT SERVICE'>TALENT SERVICE <img className='inactive-mark-img'  src={inactivemark} alt="" /> </h1>
                         {
                             activeImg === talentImg &&
                             <div>
-                                <h1>TALENT SERVICE</h1>
+                                <h1>TALENT SERVICE<img className='active-mark-img'  src={activemark} alt="" /> </h1>
                                 <p> We provide full service creator management and brand partnership
                                     unbeatable influencer marketing and media for influencers and brands.</p></div>
                         }
                     </div>
                     <div id='third' onClick={changeUI} defaultValue='tech' className="text-cont">
-                        <h1 style={{ display: activeImg === plateformTechImg ? 'none' : 'block' }} className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH</h1>
+                        <h1 style={{ display: activeImg === plateformTechImg ? 'none' : 'block' }} className={globalTextClass} id='third' data-text='PLATEFORM & TECH' >PLATEFORM & TECH <img className='inactive-mark-img'  src={inactivemark} alt="" /> </h1>
                         {
                             activeImg === plateformTechImg &&
-                            <div><h1>PLATEFORM & TECH</h1> <p>We Create end to end campaign and talent management platform
+                            <div><h1>PLATEFORM & TECH <img className='active-mark-img'  src={activemark} alt="" /> </h1> <p>We Create end to end campaign and talent management platform
                                 with the help of our data and ai based next gen marketing
                                 tools.</p></div>
                         }
@@ -428,7 +427,7 @@ const HomeLanding = () => {
                                         <h3>POSTS</h3>
                                     </div>
                                     <div className="engagements">
-                                        <h1>{reach}+ </h1>
+                                        <h1 className='engage'>{reach}+ </h1>
                                         <h3>ENGAGEMENTS</h3>
                                     </div>
                                 </div>
