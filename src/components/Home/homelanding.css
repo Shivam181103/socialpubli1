@@ -254,12 +254,13 @@ h1,h2,h3,h4,p{
   
   .influencers>div{
       width: 100%;
-      height: 35rem;
+      height: 36rem;
       display: flex;
       justify-content: center;
       align-items: center;
   }
   .influencer-img{
+     margin-top: 1rem;
       width: 100%;
       height: auto;
   }
@@ -1012,3 +1013,12 @@ img.influencer-img{
         font-size: 2.7rem;
     }
 }
+
+/* h1,h2,h3,p{
+    font-family: 'Georama', sans-serif;
+   
+} */
+
+ body>div{
+     overflow-x: hidden;
+ }
