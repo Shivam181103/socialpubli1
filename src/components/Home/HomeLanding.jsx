@@ -10,9 +10,9 @@ import keyboard from '../../IMAGES1/joinus_bg_1.png'
 import pen from '../../IMAGES1/joinus_bg_2.png'
 import book from '../../IMAGES1/joinus_bg_3.png'
 import joinUs from '../../IMAGES1/join_us_title.png'
-import plateformTechImg from '../../IMAGES1/platform & Tech..jpg'
-import marketingService from '../../IMAGES1/digital_marketing.jpg'
-import talentImg from '../../IMAGES1/talent_services.jpg'
+import plateformTechImg from '../../IMAGES1/Platform & tech.png'
+import marketingService from '../../IMAGES1/Marketing Services.png'
+import talentImg from '../../IMAGES1/Talent Services.png'
 import brand1 from '../../IMAGES1/brand_1.jpg';
 import brand2 from '../../IMAGES1/brand_2.jpg';
 import brand3 from '../../IMAGES1/brand_5.jpg';
@@ -116,9 +116,9 @@ const GlobalCont = () => {
             <>
                 <div className='global-img-cont'>
                   <div>
-                    <img className='active-img' src={activeImg} alt="" />
-                    <img className='passive1' src={restImg[0]} alt="" />
-                    <img className='passive2' src={restImg[1]} alt="" />
+                    <img   className='active-img' src={activeImg} alt="" />
+                    {/* <img style={{zIndex:'-11'}} className='passive1' src={restImg[0]} alt="" />
+                    <img style={{zIndex:'-11'}} className='passive2' src={restImg[1]} alt="" /> */}
                     </div>
                 </div>
 
